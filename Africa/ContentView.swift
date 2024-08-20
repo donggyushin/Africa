@@ -11,7 +11,6 @@ import Videos
 import Map
 import Gallery
 import PreviewData
-import Swinject
 
 struct ContentView: View {
     

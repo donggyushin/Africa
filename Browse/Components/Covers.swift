@@ -19,7 +19,7 @@ struct Covers: View {
                 VStack {
                     Image(image.name, bundle: .init(identifier: "com.donggyu.Browse"))
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                 }
             }
         }
