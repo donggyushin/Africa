@@ -12,6 +12,9 @@ import Map
 import Gallery
 
 struct ContentView: View {
+    
+    let injector: Injector
+    
     var body: some View {
         TabView {
             BrowseView()
@@ -41,7 +44,7 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-        .preferredColorScheme(.dark)
-}
+//#Preview {
+//    return ContentView(injector: <#any Injector#>)
+//        .preferredColorScheme(.dark)
+//}

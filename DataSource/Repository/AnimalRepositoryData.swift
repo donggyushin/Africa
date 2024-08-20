@@ -12,4 +12,6 @@ public final class AnimalRepositoryData: AnimalRepository {
     public var covers: [Domain.CoverImageDomain] {
         COVER_IMAGES
     }
+    
+    public init() { }
 }
