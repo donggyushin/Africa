@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import Swinject
 
 @main
 struct AfricaApp: App {
+    
+    let injector: Injector
+    
+    init() {
+        injector = DependencyInjector(container: Container())
+        injector.assemble([
+            DataAssembly(),
+            BrowseAssembly(),
+            MainAssembly()
+        ])
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            injector.resolve(ContentView.self)
         }
     }
 }

@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "3CEF58A1-EBAC-4D13-9EF4-49F5CA05C050",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Africa.xcodeproj",
+      "identifier" : "702E60132C74C10A009D5F90",
+      "name" : "Africa"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Africa.xcodeproj",
+        "identifier" : "70817BD82C74CCE500C96032",
+        "name" : "Test"
+      }
+    }
+  ],
+  "version" : 1
+}
