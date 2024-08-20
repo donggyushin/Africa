@@ -53,6 +53,10 @@
 		709D8F882C74D74200CB5E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702E601B2C74C10B009D5F90 /* Assets.xcassets */; };
 		709D8F892C74D74300CB5E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702E601B2C74C10B009D5F90 /* Assets.xcassets */; };
 		709D8F8A2C74D74400CB5E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702E601B2C74C10B009D5F90 /* Assets.xcassets */; };
+		709D8F8C2C74D7E200CB5E90 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D8F8B2C74D7E200CB5E90 /* BrowseViewModel.swift */; };
+		709D8F8D2C74D89400CB5E90 /* PreviewData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70817C002C74D31E00C96032 /* PreviewData.framework */; };
+		709D8F8E2C74D89400CB5E90 /* PreviewData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70817C002C74D31E00C96032 /* PreviewData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		709D8F922C74D91E00CB5E90 /* BrowseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D8F912C74D91E00CB5E90 /* BrowseAssembly.swift */; };
 		70EA8E112C74C2D700558B75 /* Files.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EA8E102C74C2D700558B75 /* Files.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70EA8E142C74C2D700558B75 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; };
 		70EA8E152C74C2D700558B75 /* Files.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -166,6 +170,13 @@
 			remoteGlobalIDString = 70EA8E0D2C74C2D700558B75;
 			remoteInfo = Files;
 		};
+		709D8F8F2C74D89400CB5E90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E600C2C74C10A009D5F90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70817BFF2C74D31E00C96032;
+			remoteInfo = PreviewData;
+		};
 		70EA8E122C74C2D700558B75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 702E600C2C74C10A009D5F90 /* Project object */;
@@ -246,6 +257,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				709D8F842C74D6D500CB5E90 /* Files.framework in Embed Frameworks */,
+				709D8F8E2C74D89400CB5E90 /* PreviewData.framework in Embed Frameworks */,
 				709D8F7F2C74D6BF00CB5E90 /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -299,6 +311,8 @@
 		70817C172C74D42500C96032 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		70817C1B2C74D53600C96032 /* CoverImageBrowse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageBrowse.swift; sourceTree = "<group>"; };
 		70817C1D2C74D58900C96032 /* Covers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covers.swift; sourceTree = "<group>"; };
+		709D8F8B2C74D7E200CB5E90 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
+		709D8F912C74D91E00CB5E90 /* BrowseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseAssembly.swift; sourceTree = "<group>"; };
 		70EA8E0E2C74C2D700558B75 /* Files.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EA8E102C74C2D700558B75 /* Files.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Files.h; sourceTree = "<group>"; };
 		70EA8E1B2C74C2F600558B75 /* lioness.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lioness.mp4; sourceTree = "<group>"; };
@@ -392,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				709D8F832C74D6D500CB5E90 /* Files.framework in Frameworks */,
+				709D8F8D2C74D89400CB5E90 /* PreviewData.framework in Frameworks */,
 				709D8F7E2C74D6BF00CB5E90 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +594,7 @@
 		70817BF62C74D14800C96032 /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				709D8F912C74D91E00CB5E90 /* BrowseAssembly.swift */,
 				70817BF92C74D1DA00C96032 /* DataAssembly.swift */,
 				70817BF72C74D17600C96032 /* DependencyInjector.swift */,
 				70817C172C74D42500C96032 /* MainAssembly.swift */,
@@ -675,6 +691,7 @@
 			isa = PBXGroup;
 			children = (
 				70EA8E4A2C74C58600558B75 /* BrowseView.swift */,
+				709D8F8B2C74D7E200CB5E90 /* BrowseViewModel.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -942,6 +959,7 @@
 			dependencies = (
 				709D8F812C74D6BF00CB5E90 /* PBXTargetDependency */,
 				709D8F862C74D6D500CB5E90 /* PBXTargetDependency */,
+				709D8F902C74D89400CB5E90 /* PBXTargetDependency */,
 			);
 			name = Browse;
 			productName = Browse;
@@ -1186,6 +1204,7 @@
 				70817BF82C74D17600C96032 /* DependencyInjector.swift in Sources */,
 				702E60182C74C10A009D5F90 /* AfricaApp.swift in Sources */,
 				70817BFA2C74D1DA00C96032 /* DataAssembly.swift in Sources */,
+				709D8F922C74D91E00CB5E90 /* BrowseAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1239,6 +1258,7 @@
 			files = (
 				70EA8E4B2C74C58600558B75 /* BrowseView.swift in Sources */,
 				70817C1C2C74D53600C96032 /* CoverImageBrowse.swift in Sources */,
+				709D8F8C2C74D7E200CB5E90 /* BrowseViewModel.swift in Sources */,
 				70817C1E2C74D58900C96032 /* Covers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1324,6 +1344,11 @@
 			isa = PBXTargetDependency;
 			target = 70EA8E0D2C74C2D700558B75 /* Files */;
 			targetProxy = 709D8F852C74D6D500CB5E90 /* PBXContainerItemProxy */;
+		};
+		709D8F902C74D89400CB5E90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70817BFF2C74D31E00C96032 /* PreviewData */;
+			targetProxy = 709D8F8F2C74D89400CB5E90 /* PBXContainerItemProxy */;
 		};
 		70EA8E132C74C2D700558B75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

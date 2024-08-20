@@ -17,6 +17,7 @@ struct AfricaApp: App {
         injector = DependencyInjector(container: Container())
         injector.assemble([
             DataAssembly(),
+            BrowseAssembly(),
             MainAssembly()
         ])
     }

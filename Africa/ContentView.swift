@@ -15,9 +15,11 @@ import Swinject
 
 struct ContentView: View {
     
+    let browseFactory: () -> BrowseView
+    
     var body: some View {
         TabView {
-            BrowseView()
+            browseFactory()
                 .tabItem {
                     Image(systemName: "square.grid.2x2")
                     Text("Browse")
@@ -29,13 +31,13 @@ struct ContentView: View {
                     Text("Watch")
                 }
             
-            BrowseView()
+            MapView()
                 .tabItem {
                     Image(systemName: "map")
                     Text("Locations")
                 }
             
-            BrowseView()
+            GalleryView()
                 .tabItem {
                     Image(systemName: "photo")
                     Text("Gallery")
@@ -45,6 +47,11 @@ struct ContentView: View {
 }
 
 #Preview {
-    return ContentView()
-        .preferredColorScheme(.dark)
+    
+    let animalRepository = AnimalRepositoryPreview()
+    
+    return ContentView {
+        BrowseView(animalRepository: animalRepository)
+    }
+    .preferredColorScheme(.dark)
 }

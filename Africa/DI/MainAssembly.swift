@@ -6,11 +6,14 @@
 //
 
 import Swinject
+import Browse
 
 public struct MainAssembly: Assembly {
     public func assemble(container: Swinject.Container) {
-        container.register(ContentView.self) { _ in
-            return ContentView()
+        container.register(ContentView.self) { resolver in
+            return  ContentView {
+                resolver.resolve(BrowseView.self)!
+            }
         }
     }
 }
