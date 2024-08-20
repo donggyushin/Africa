@@ -22,7 +22,7 @@ struct AfricaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(injector: injector)
+            ContentView()
         }
     }
 }

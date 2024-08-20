@@ -10,10 +10,10 @@ import Browse
 import Videos
 import Map
 import Gallery
+import PreviewData
+import Swinject
 
 struct ContentView: View {
-    
-    let injector: Injector
     
     var body: some View {
         TabView {
@@ -44,7 +44,7 @@ struct ContentView: View {
     }
 }
 
-//#Preview {
-//    return ContentView(injector: <#any Injector#>)
-//        .preferredColorScheme(.dark)
-//}
+#Preview {
+    return ContentView()
+        .preferredColorScheme(.dark)
+}
