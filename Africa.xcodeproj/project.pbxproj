@@ -42,6 +42,7 @@
 		70817C112C74D33500C96032 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; };
 		70817C122C74D33500C96032 /* Files.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70817C162C74D34000C96032 /* AnimalRepositoryPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70817C152C74D34000C96032 /* AnimalRepositoryPreview.swift */; };
+		70817C182C74D42500C96032 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70817C172C74D42500C96032 /* MainAssembly.swift */; };
 		70EA8E112C74C2D700558B75 /* Files.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EA8E102C74C2D700558B75 /* Files.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70EA8E142C74C2D700558B75 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; };
 		70EA8E152C74C2D700558B75 /* Files.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -259,6 +260,7 @@
 		70817C002C74D31E00C96032 /* PreviewData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PreviewData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70817C022C74D31E00C96032 /* PreviewData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewData.h; sourceTree = "<group>"; };
 		70817C152C74D34000C96032 /* AnimalRepositoryPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRepositoryPreview.swift; sourceTree = "<group>"; };
+		70817C172C74D42500C96032 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		70EA8E0E2C74C2D700558B75 /* Files.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EA8E102C74C2D700558B75 /* Files.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Files.h; sourceTree = "<group>"; };
 		70EA8E1B2C74C2F600558B75 /* lioness.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lioness.mp4; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 			children = (
 				70817BF92C74D1DA00C96032 /* DataAssembly.swift */,
 				70817BF72C74D17600C96032 /* DependencyInjector.swift */,
+				70817C172C74D42500C96032 /* MainAssembly.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -1113,6 +1116,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70817C182C74D42500C96032 /* MainAssembly.swift in Sources */,
 				702E601A2C74C10A009D5F90 /* ContentView.swift in Sources */,
 				70817BF82C74D17600C96032 /* DependencyInjector.swift in Sources */,
 				702E60182C74C10A009D5F90 /* AfricaApp.swift in Sources */,

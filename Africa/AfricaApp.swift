@@ -16,13 +16,14 @@ struct AfricaApp: App {
     init() {
         injector = DependencyInjector(container: Container())
         injector.assemble([
-            DataAssembly()
+            DataAssembly(),
+            MainAssembly()
         ])
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            injector.resolve(ContentView.self)
         }
     }
 }
