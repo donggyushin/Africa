@@ -194,12 +194,12 @@
 			isa = PBXGroup;
 			children = (
 				702E60162C74C10A009D5F90 /* Africa */,
-				70EA8E0F2C74C2D700558B75 /* Files */,
 				70EA8E3F2C74C56C00558B75 /* Browse */,
-				70EA8E522C74C5E400558B75 /* Videos */,
-				70EA8E652C74C62C00558B75 /* Map */,
+				70EA8E0F2C74C2D700558B75 /* Files */,
 				70EA8E792C74C67300558B75 /* Gallery */,
+				70EA8E652C74C62C00558B75 /* Map */,
 				702E60152C74C10A009D5F90 /* Products */,
+				70EA8E522C74C5E400558B75 /* Videos */,
 			);
 			sourceTree = "<group>";
 		};
