@@ -59,6 +59,7 @@
 		709D8F922C74D91E00CB5E90 /* BrowseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D8F912C74D91E00CB5E90 /* BrowseAssembly.swift */; };
 		709D8F942C76270C00CB5E90 /* AnimalDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D8F932C76270C00CB5E90 /* AnimalDomain.swift */; };
 		709D8F962C76278200CB5E90 /* AnimalFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D8F952C76278200CB5E90 /* AnimalFile.swift */; };
+		709D8F982C76285800CB5E90 /* AnimalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D8F972C76285800CB5E90 /* AnimalsData.swift */; };
 		70EA8E112C74C2D700558B75 /* Files.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EA8E102C74C2D700558B75 /* Files.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70EA8E142C74C2D700558B75 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; };
 		70EA8E152C74C2D700558B75 /* Files.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -317,6 +318,7 @@
 		709D8F912C74D91E00CB5E90 /* BrowseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseAssembly.swift; sourceTree = "<group>"; };
 		709D8F932C76270C00CB5E90 /* AnimalDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDomain.swift; sourceTree = "<group>"; };
 		709D8F952C76278200CB5E90 /* AnimalFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFile.swift; sourceTree = "<group>"; };
+		709D8F972C76285800CB5E90 /* AnimalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsData.swift; sourceTree = "<group>"; };
 		70EA8E0E2C74C2D700558B75 /* Files.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EA8E102C74C2D700558B75 /* Files.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Files.h; sourceTree = "<group>"; };
 		70EA8E1B2C74C2F600558B75 /* lioness.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lioness.mp4; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 		70817BC52C74CC0100C96032 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				709D8F972C76285800CB5E90 /* AnimalsData.swift */,
 				70817BC62C74CC1400C96032 /* CoverImagesData.swift */,
 			);
 			path = Data;
@@ -1254,6 +1257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70817BC42C74CAFA00C96032 /* CodableBundleExtension.swift in Sources */,
+				709D8F982C76285800CB5E90 /* AnimalsData.swift in Sources */,
 				709D8F962C76278200CB5E90 /* AnimalFile.swift in Sources */,
 				70817BC72C74CC1400C96032 /* CoverImagesData.swift in Sources */,
 				70817BC12C74CAD500C96032 /* CoverImageFile.swift in Sources */,
