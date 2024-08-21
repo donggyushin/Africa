@@ -13,6 +13,8 @@ public struct MainAssembly: Assembly {
         container.register(ContentView.self) { resolver in
             return  ContentView {
                 resolver.resolve(BrowseView.self)!
+            } animalDetailFactory: { id in
+                resolver.resolve(AnimalDetailView?.self, argument: id)!
             }
         }
     }

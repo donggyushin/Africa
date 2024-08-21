@@ -8,6 +8,7 @@
 import SwiftUI
 import Domain
 import PreviewData
+import Common
 
 public struct BrowseView: View {
     
@@ -24,7 +25,12 @@ public struct BrowseView: View {
             
             
             ForEach(viewModel.animals) { data in
-                AnimalListItem(data: data)
+                Button {
+                    Common.openURL(url: "dgafrica://browse?screen=detail&id=\(data.id)")
+                } label: {
+                    AnimalListItem(data: data)
+                        .foregroundStyle(Color(uiColor: .label))
+                }
             }
         }
         .scrollIndicators(.hidden)
