@@ -20,6 +20,34 @@ struct ContentView: View {
     let browseFactory: () -> BrowseView
     let animalDetailFactory: (String) -> AnimalDetailView?
     
+    private func handleURL(url: URL) {
+        guard let host = url.host() else { return }
+        
+        guard let coordinator else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                handleURL(url: url)
+            }
+            return
+        }
+        
+        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        let queries = urlComponents?.queryItems
+        
+        let screen: String? = queries?.first(where: { $0.name == "screen" })?.value
+        let id: String? = queries?.first(where: { $0.name == "id" })?.value
+        
+        switch host {
+        case "browse":
+            guard let screen, let id else { return }
+            switch screen {
+            case "detail":
+                coordinator.browse.navigateToDetail(animalId: id)
+            default: break
+            }
+        default: break
+        }
+    }
+    
     var body: some View {
         TabView {
             NavigationStack(path: $browseNavigationPath) {
@@ -27,7 +55,8 @@ struct ContentView: View {
                     .navigationDestination(for: BrowseNavigation.self) { navigation in
                         switch navigation {
                         case .detail(let id):
-                            animalDetailFactory(id)
+                            animalDetailFactory(id)?
+                                .toolbar(.hidden, for: .tabBar)
                         }
                     }
             }
@@ -60,6 +89,9 @@ struct ContentView: View {
         }
         .onAppear {
             coordinator = .init(browseNavigationPath: $browseNavigationPath, selectedTab: $selectedTab)
+        }
+        .onOpenURL { url in
+            handleURL(url: url)
         }
     }
 }
