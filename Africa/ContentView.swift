@@ -14,33 +14,51 @@ import PreviewData
 
 struct ContentView: View {
     
+    @State private var browseNavigationPath: [BrowseNavigation] = []
+    @State private var selectedTab: Tab = .browse
+    
     let browseFactory: () -> BrowseView
     
     var body: some View {
         TabView {
-            browseFactory()
-                .tabItem {
-                    Image(systemName: "square.grid.2x2")
-                    Text("Browse")
-                }
+            NavigationStack(path: $browseNavigationPath) {
+                browseFactory()
+                    .navigationDestination(for: BrowseNavigation.self) { navigation in
+                        switch navigation {
+                        case .detail(let id):
+                            Text(id)
+                        }
+                    }
+            }
+            .tabItem {
+                Image(systemName: "square.grid.2x2")
+                Text("Browse")
+            }
+            .tag(Tab.browse)
             
             VideoListView()
                 .tabItem {
                     Image(systemName: "play.rectangle")
                     Text("Watch")
                 }
+                .tag(Tab.video)
             
             MapView()
                 .tabItem {
                     Image(systemName: "map")
                     Text("Locations")
                 }
+                .tag(Tab.map)
             
             GalleryView()
                 .tabItem {
                     Image(systemName: "photo")
                     Text("Gallery")
                 }
+                .tag(Tab.gallery)
+        }
+        .onAppear {
+            coordinator = .init(browseNavigationPath: $browseNavigationPath, selectedTab: $selectedTab)
         }
     }
 }
