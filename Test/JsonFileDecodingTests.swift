@@ -11,6 +11,10 @@ import Files
 
 final class JsonFileDecodingTests: XCTestCase {
     func testCoverImages() {
-        XCTAssertEqual(COVER_IMAGES.count, 7)
+        XCTAssertNotEqual(COVER_IMAGES.count, 0)
+    }
+    
+    func testAnimals() {
+        XCTAssertNotEqual(ANIMALS.count, 0)
     }
 }

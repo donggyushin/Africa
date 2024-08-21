@@ -6,5 +6,6 @@
 //
 
 public protocol AnimalRepository {
+    var animals: [AnimalDomain] { get }
     var covers: [CoverImageDomain] { get }
 }
