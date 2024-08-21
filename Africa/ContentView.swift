@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var selectedTab: Tab = .browse
     
     let browseFactory: () -> BrowseView
+    let animalDetailFactory: (String) -> AnimalDetailView?
     
     var body: some View {
         TabView {
@@ -26,7 +27,7 @@ struct ContentView: View {
                     .navigationDestination(for: BrowseNavigation.self) { navigation in
                         switch navigation {
                         case .detail(let id):
-                            Text(id)
+                            animalDetailFactory(id)
                         }
                     }
             }
@@ -69,6 +70,8 @@ struct ContentView: View {
     
     return ContentView {
         BrowseView(animalRepository: animalRepository)
+    } animalDetailFactory: { id in
+        AnimalDetailView(animalId: id, animalRepository: animalRepository)
     }
     .preferredColorScheme(.dark)
 }
