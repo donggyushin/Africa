@@ -21,6 +21,11 @@ public struct BrowseView: View {
         ScrollView {
             Covers(images: viewModel.covers)
                 .frame(height: 300)
+            
+            
+            ForEach(viewModel.animals) { data in
+                AnimalListItem(data: data)
+            }
         }
         .scrollIndicators(.hidden)
     }
