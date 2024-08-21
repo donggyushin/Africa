@@ -6,12 +6,23 @@
 //
 
 public struct AnimalDomain {
-    let id: String
-    let name: String
-    let headline: String
-    let description: String
-    let link: String
-    let image: String
-    let gallery: [String]
-    let fact: [String]
+    public let id: String
+    public let name: String
+    public let headline: String
+    public let description: String
+    public let link: String
+    public let image: String
+    public let gallery: [String]
+    public let fact: [String]
+    
+    public init(id: String, name: String, headline: String, description: String, link: String, image: String, gallery: [String], fact: [String]) {
+        self.id = id
+        self.name = name
+        self.headline = headline
+        self.description = description
+        self.link = link
+        self.image = image
+        self.gallery = gallery
+        self.fact = fact
+    }
 }
