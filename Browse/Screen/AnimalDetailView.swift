@@ -44,10 +44,30 @@ public struct AnimalDetailView: View {
                 .foregroundStyle(.accent)
                 .padding(.horizontal)
             
-            Heading(image: "photo.on.rectangle.angled", text:  "Wilderness in Pictures")
+            Group {
+                Heading(image: "photo.on.rectangle.angled", text:  "Wilderness in Pictures")
+                Gallery(gallery: animal.gallery)
+            }
             .padding(.vertical)
             
-            Gallery(gallery: animal.gallery)
+            Group {
+                Heading(image: "questionmark.circle", text:  "Did you know?")
+                Facts(facts: animal.fact)
+            }
+            .padding()
+            
+            Group {
+                Heading(image: "info.circle", text:  "All about \(animal.name)")
+                Text(animal.description)
+                    .multilineTextAlignment(.leading)
+            }
+            .padding()
+            
+            Group {
+                Heading(image: "map", text:  "National Park")
+            }
+            .padding()
+            
         }
         .scrollIndicators(.hidden)
         .navigationTitle("Learn about \(animal.name)")
