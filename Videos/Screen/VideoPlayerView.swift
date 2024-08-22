@@ -8,6 +8,7 @@
 import SwiftUI
 import Domain
 import PreviewData
+import AVKit
 
 public struct VideoPlayerView: View {
         
@@ -19,7 +20,18 @@ public struct VideoPlayerView: View {
     }
     
     public var body: some View {
-        Text("Video Player View")
+        
+        if let url = Bundle(identifier: "com.donggyu.Files")?.url(forResource: video.id, withExtension: "mp4") {
+            VideoPlayer(
+                player: .init(
+                    url: url
+                )
+            )
+        } else {
+            Text("Can't find URL")
+        }
+        
+        
     }
 }
 
