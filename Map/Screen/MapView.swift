@@ -8,6 +8,7 @@
 import SwiftUI
 import Domain
 import PreviewData
+import MapKit
 
 public struct MapView: View {
     
@@ -18,7 +19,12 @@ public struct MapView: View {
     }
     
     public var body: some View {
-        Text("Map")
+        Map {
+            ForEach(viewModel.locations) { location in
+                Marker(location.name, coordinate: location.coordinate)
+                    .tint(.accent)
+            }
+        }
     }
 }
 
