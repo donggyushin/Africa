@@ -18,6 +18,7 @@ struct AfricaApp: App {
         injector.assemble([
             DataAssembly(),
             BrowseAssembly(),
+            VideoAssembly(),
             MainAssembly()
         ])
     }

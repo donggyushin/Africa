@@ -20,6 +20,8 @@ struct ContentView: View {
     let browseFactory: () -> BrowseView
     let animalDetailFactory: (String) -> AnimalDetailView?
     
+    let videoListFactory: () -> VideoListView
+    
     private func handleURL(url: URL) {
         guard let host = url.host() else { return }
         
@@ -66,7 +68,7 @@ struct ContentView: View {
             }
             .tag(Tab.browse)
             
-            VideoListView()
+            videoListFactory()
                 .tabItem {
                     Image(systemName: "play.rectangle")
                     Text("Watch")
@@ -104,6 +106,8 @@ struct ContentView: View {
         BrowseView(animalRepository: animalRepository)
     } animalDetailFactory: { id in
         AnimalDetailView(animalId: id, animalRepository: animalRepository)
+    } videoListFactory: {
+        VideoListView()
     }
     .preferredColorScheme(.dark)
 }

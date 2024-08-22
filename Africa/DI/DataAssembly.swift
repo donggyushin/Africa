@@ -9,10 +9,14 @@ import Swinject
 import Domain
 import DataSource
 
-public struct DataAssembly: Assembly {
-    public func assemble(container: Swinject.Container) {
+struct DataAssembly: Assembly {
+    func assemble(container: Swinject.Container) {
         container.register(AnimalRepository.self) { _ in
             AnimalRepositoryData()
+        }
+        
+        container.register(VideoRepository.self) { _ in
+            return VideoRepositoryData()
         }
     }
 }
