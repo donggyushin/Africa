@@ -49,6 +49,8 @@ struct ContentView: View {
                 coordinator.browse.select()
             case "videos":
                 coordinator.videos.select()
+            case "map":
+                coordinator.map.select()
             default:
                 break
             }
