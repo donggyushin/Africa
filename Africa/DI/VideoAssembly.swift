@@ -15,5 +15,10 @@ struct VideoAssembly: Assembly {
             let videoRepository: VideoRepository = resolver.resolve(VideoRepository.self)!
             return VideoListView(videoRepository: videoRepository)
         }
+        
+        container.register(VideoPlayerView?.self) { resolver, id in
+            let videoRepository: VideoRepository = resolver.resolve(VideoRepository.self)!
+            return VideoPlayerView(videoRepository: videoRepository, videoId: id)
+        }
     }
 }

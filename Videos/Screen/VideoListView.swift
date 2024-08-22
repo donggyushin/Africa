@@ -22,7 +22,7 @@ public struct VideoListView: View {
         List {
             ForEach(viewModel.videos) { data in
                 Button {
-                    openURL(url: "dgafrica://videos?screen=video&id=\(data.id)")
+                    openURL(url: "dgafrica://videos?screen=player&id=\(data.id)")
                 } label: {
                     Thumbnail(data: data)
                         .foregroundStyle(Color(uiColor: .label))

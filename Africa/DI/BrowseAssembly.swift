@@ -16,7 +16,7 @@ struct BrowseAssembly: Assembly {
             return BrowseView(animalRepository: animalRepository)
         }
         
-        container.register(AnimalDetailView?.self) { (resolver, id: String) in
+        container.register(AnimalDetailView?.self) { resolver, id in
             let animalRepository = resolver.resolve(AnimalRepository.self)!
             return AnimalDetailView(animalId: id, animalRepository: animalRepository)
         }

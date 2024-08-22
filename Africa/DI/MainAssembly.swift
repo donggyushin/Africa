@@ -18,6 +18,8 @@ struct MainAssembly: Assembly {
                 resolver.resolve(AnimalDetailView?.self, argument: id)!
             } videoListFactory: {
                 resolver.resolve(VideoListView.self)!
+            } videoPlayerFactory: { id in
+                resolver.resolve(VideoPlayerView?.self, argument: id)!
             }
         }
     }
