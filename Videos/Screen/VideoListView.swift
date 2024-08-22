@@ -8,6 +8,7 @@
 import SwiftUI
 import Domain
 import PreviewData
+import Common
 
 public struct VideoListView: View {
     
@@ -18,11 +19,25 @@ public struct VideoListView: View {
     }
     
     public var body: some View {
-        Text("Video List")
+        List {
+            ForEach(viewModel.videos) { data in
+                Button {
+                    openURL(url: "dgafrica://videos?screen=video&id=\(data.id)")
+                } label: {
+                    Thumbnail(data: data)
+                        .foregroundStyle(Color(uiColor: .label))
+                }
+            }
+        }
+        .scrollIndicators(.hidden)
+        .navigationTitle("Videos")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    return VideoListView(videoRepository: VideoRepositoryPreview())
-        .preferredColorScheme(.dark)
+    return NavigationStack {
+        VideoListView(videoRepository: VideoRepositoryPreview())
+    }
+    .preferredColorScheme(.dark)
 }

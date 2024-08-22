@@ -7,7 +7,7 @@
 
 import Domain
 
-struct VideoVideos: Codable {
+struct VideoVideos: Identifiable {
     let id: String
     let name: String
     let headline: String

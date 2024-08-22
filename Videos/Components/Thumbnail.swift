@@ -14,7 +14,7 @@ struct Thumbnail: View {
     let data: VideoVideos
     
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
             ZStack {
                 Image(data.cover, bundle: .init(identifier: "com.donggyu.Videos"))
                     .resizable()
@@ -40,6 +40,8 @@ struct Thumbnail: View {
                     .lineLimit(2)
                 
             }
+            
+            Spacer()
         }
     }
 }
