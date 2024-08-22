@@ -6,18 +6,46 @@
 //
 
 import SwiftUI
+import Domain
+import PreviewData
+import Common
 
 public struct VideoListView: View {
     
-    public init() {
-        
+    @StateObject var viewModel: VideoListViewModel
+    
+    public init(videoRepository: VideoRepository) {
+        _viewModel = .init(wrappedValue: .init(videoRepository: videoRepository))
     }
     
     public var body: some View {
-        Text("Video List")
+        List {
+            ForEach(viewModel.videos) { data in
+                Button {
+                    openURL(url: "dgafrica://videos?screen=player&id=\(data.id)")
+                } label: {
+                    Thumbnail(data: data)
+                        .foregroundStyle(Color(uiColor: .label))
+                }
+            }
+        }
+        .scrollIndicators(.hidden)
+        .navigationTitle("Videos")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            Button {
+                viewModel.shuffle()
+            } label: {
+                Image(systemName: "arrow.2.squarepath")
+            }
+            .foregroundStyle(.accent)
+        }
     }
 }
 
 #Preview {
-    VideoListView()
+    return NavigationStack {
+        VideoListView(videoRepository: VideoRepositoryPreview())
+    }
+    .preferredColorScheme(.dark)
 }

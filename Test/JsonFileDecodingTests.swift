@@ -17,4 +17,8 @@ final class JsonFileDecodingTests: XCTestCase {
     func testAnimals() {
         XCTAssertNotEqual(ANIMALS.count, 0)
     }
+    
+    func testVideos() {
+        XCTAssertNotEqual(VIDEOS.count, 0)
+    }
 }

@@ -15,10 +15,14 @@ import PreviewData
 struct ContentView: View {
     
     @State private var browseNavigationPath: [BrowseNavigation] = []
+    @State private var videosNavigationPath: [VideosNavigation] = []
     @State private var selectedTab: Tab = .browse
     
     let browseFactory: () -> BrowseView
     let animalDetailFactory: (String) -> AnimalDetailView?
+    
+    let videoListFactory: () -> VideoListView
+    let videoPlayerFactory: (String) -> VideoPlayerView?
     
     private func handleURL(url: URL) {
         guard let host = url.host() else { return }
@@ -36,12 +40,21 @@ struct ContentView: View {
         let screen: String? = queries?.first(where: { $0.name == "screen" })?.value
         let id: String? = queries?.first(where: { $0.name == "id" })?.value
         
+        guard let screen else { return }
+        
         switch host {
         case "browse":
-            guard let screen, let id else { return }
             switch screen {
             case "detail":
+                guard let id else { return }
                 coordinator.browse.navigateToDetail(animalId: id)
+            default: break
+            }
+        case "videos":
+            switch screen {
+            case "player":
+                guard let id else { return }
+                coordinator.videos.navigateToPlayer(videoId: id)
             default: break
             }
         default: break
@@ -66,12 +79,23 @@ struct ContentView: View {
             }
             .tag(Tab.browse)
             
-            VideoListView()
-                .tabItem {
-                    Image(systemName: "play.rectangle")
-                    Text("Watch")
-                }
-                .tag(Tab.video)
+            NavigationStack(path: $videosNavigationPath) {
+                videoListFactory()
+                    .navigationDestination(for: VideosNavigation.self) { navigation in
+                        switch navigation {
+                        case .player(let id):
+                            videoPlayerFactory(id)?
+                                .toolbar(.hidden, for: .tabBar)
+                        }
+                    }
+                    
+            }
+            .tabItem {
+                Image(systemName: "play.rectangle")
+                Text("Watch")
+            }
+            .tag(Tab.video)
+            
             
             MapView()
                 .tabItem {
@@ -88,7 +112,11 @@ struct ContentView: View {
                 .tag(Tab.gallery)
         }
         .onAppear {
-            coordinator = .init(browseNavigationPath: $browseNavigationPath, selectedTab: $selectedTab)
+            coordinator = .init(
+                browseNavigationPath: $browseNavigationPath,
+                videosNavigationPath: $videosNavigationPath,
+                selectedTab: $selectedTab
+            )
         }
         .onOpenURL { url in
             handleURL(url: url)
@@ -99,11 +127,16 @@ struct ContentView: View {
 #Preview {
     
     let animalRepository = AnimalRepositoryPreview()
+    let videoRepository = VideoRepositoryPreview()
     
     return ContentView {
         BrowseView(animalRepository: animalRepository)
     } animalDetailFactory: { id in
         AnimalDetailView(animalId: id, animalRepository: animalRepository)
+    } videoListFactory: {
+        VideoListView(videoRepository: videoRepository)
+    } videoPlayerFactory: { id in
+        VideoPlayerView(videoRepository: videoRepository, videoId: id)
     }
     .preferredColorScheme(.dark)
 }
