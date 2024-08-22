@@ -27,6 +27,14 @@ public struct VideoPlayerView: View {
                     url: url
                 )
             )
+            .overlay(alignment: .topLeading) {
+                Image("logo", bundle: .init(identifier: "com.donggyu.Videos"))
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 32, height: 32)
+            }
+            .navigationTitle(video.name)
+            .navigationBarTitleDisplayMode(.inline)
         } else {
             Text("Can't find URL")
         }
@@ -36,6 +44,8 @@ public struct VideoPlayerView: View {
 }
 
 #Preview {
-    VideoPlayerView(videoRepository: VideoRepositoryPreview(), videoId: "cheetah")
-        .preferredColorScheme(.dark)
+    NavigationStack {
+        VideoPlayerView(videoRepository: VideoRepositoryPreview(), videoId: "cheetah")
+    }
+    .preferredColorScheme(.dark)
 }
