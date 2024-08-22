@@ -26,6 +26,8 @@ struct ContentView: View {
     
     let mapFactory: () -> MapView
     
+    let galleryFactory: () -> GalleryView
+    
     private func handleURL(url: URL) {
         guard let host = url.host() else { return }
         
@@ -51,6 +53,8 @@ struct ContentView: View {
                 coordinator.videos.select()
             case "map":
                 coordinator.map.select()
+            case "gallery":
+                coordinator.gallery.select()
             default:
                 break
             }
@@ -120,7 +124,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.map)
             
-            GalleryView()
+            galleryFactory()
                 .tabItem {
                     Image(systemName: "photo")
                     Text("Gallery")
@@ -156,6 +160,8 @@ struct ContentView: View {
         VideoPlayerView(videoRepository: videoRepository, videoId: id)
     } mapFactory: {
         MapView(mapRepository: mapRepository)
+    } galleryFactory: {
+        GalleryView(animalRepository: animalRepository)
     }
     .preferredColorScheme(.dark)
 }

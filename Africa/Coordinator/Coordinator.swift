@@ -14,6 +14,7 @@ final class Coordinator {
     let browse: BrowseCoordinator
     let videos: VideosCoordinator
     let map: MapCoordinator
+    let gallery: GalleryCoordinator
     
     init(
         browseNavigationPath: Binding<[BrowseNavigation]>,
@@ -23,5 +24,6 @@ final class Coordinator {
         browse = .init(browseNavigationPath: browseNavigationPath, selectedTab: selectedTab)
         videos = .init(videosNavigationPath: videosNavigationPath, selectedTab: selectedTab)
         map = .init(selectedTab: selectedTab)
+        gallery = .init(selectedTab: selectedTab)
     }
 }

@@ -27,18 +27,5 @@ struct AnimalBrowse: Identifiable {
         gallery = domain.gallery
         fact = domain.fact
     }
-    
-    var domain: AnimalDomain {
-        .init(
-            id: id,
-            name: name,
-            headline: headline,
-            description: description,
-            link: link,
-            image: image,
-            gallery: gallery,
-            fact: fact
-        )
-    }
 }
 
