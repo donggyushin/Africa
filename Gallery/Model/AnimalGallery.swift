@@ -18,5 +18,3 @@ struct AnimalGallery: Identifiable {
         image = domain.image
     }
 }
-
-
