@@ -20,7 +20,6 @@ final class UpdateBrowseLayoutUseCaseTests: XCTestCase {
         useCase = nil
     }
 
-    // tap default when default
     func test_tap_list_when_list() throws {
         
         var layout = BrowseLayoutDomain(right: .oneColumn)
@@ -32,7 +31,6 @@ final class UpdateBrowseLayoutUseCaseTests: XCTestCase {
         XCTAssertEqual(result, expect)
     }
     
-    // tap default when column
     func test_tap_list_when_column() throws {
         var layout = BrowseLayoutDomain(right: .oneColumn)
         layout.selected = .oneColumn
@@ -44,7 +42,6 @@ final class UpdateBrowseLayoutUseCaseTests: XCTestCase {
         XCTAssertEqual(result, expect)
     }
     
-    // tap column when default
     func test_tap_column_when_list() throws {
         var layout = BrowseLayoutDomain(right: .oneColumn)
         layout.selected = .list
@@ -56,7 +53,6 @@ final class UpdateBrowseLayoutUseCaseTests: XCTestCase {
         XCTAssertEqual(result, expect)
     }
     
-    // tap column when column
     func test_tap_column_when_column() throws {
         var layout = BrowseLayoutDomain(right: .oneColumn)
         layout.selected = .oneColumn
