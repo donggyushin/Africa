@@ -42,7 +42,19 @@ struct ContentView: View {
         let screen: String? = queries?.first(where: { $0.name == "screen" })?.value
         let id: String? = queries?.first(where: { $0.name == "id" })?.value
         
-        guard let screen else { return }
+        guard let screen else {
+            
+            switch host {
+            case "browse":
+                coordinator.browse.select()
+            case "videos":
+                coordinator.videos.select()
+            default:
+                break
+            }
+            
+            return
+        }
         
         switch host {
         case "browse":
