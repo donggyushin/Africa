@@ -69,6 +69,13 @@ public struct AnimalDetailView: View {
             }
             .padding()
             
+            if let url = URL(string: animal.link) {
+                Group {
+                    Heading(image: "books.vertical", text: "Learn More")
+                    ExternalWebLink(title: animal.name, link: url)
+                }
+                .padding()
+            }
         }
         .scrollIndicators(.hidden)
         .navigationTitle("Learn about \(animal.name)")
