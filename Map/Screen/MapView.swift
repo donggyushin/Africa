@@ -6,18 +6,30 @@
 //
 
 import SwiftUI
+import Domain
+import PreviewData
+import MapKit
 
 public struct MapView: View {
     
-    public init() {
-        
+    @StateObject var viewModel: MapViewModel
+    
+    public init(mapRepository: MapRepository) {
+        _viewModel = .init(wrappedValue: .init(mapRepository: mapRepository))
     }
     
     public var body: some View {
-        Text("Map")
+        Map {
+            ForEach(viewModel.locations) { location in
+                Annotation(location.name, coordinate: location.coordinate) {
+                    AnimalAnnotation(location: location)
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    MapView()
+    MapView(mapRepository: MapRepositoryPreview())
+        .preferredColorScheme(.dark)
 }

@@ -24,6 +24,8 @@ struct ContentView: View {
     let videoListFactory: () -> VideoListView
     let videoPlayerFactory: (String) -> VideoPlayerView?
     
+    let mapFactory: () -> MapView
+    
     private func handleURL(url: URL) {
         guard let host = url.host() else { return }
         
@@ -40,7 +42,21 @@ struct ContentView: View {
         let screen: String? = queries?.first(where: { $0.name == "screen" })?.value
         let id: String? = queries?.first(where: { $0.name == "id" })?.value
         
-        guard let screen else { return }
+        guard let screen else {
+            
+            switch host {
+            case "browse":
+                coordinator.browse.select()
+            case "videos":
+                coordinator.videos.select()
+            case "map":
+                coordinator.map.select()
+            default:
+                break
+            }
+            
+            return
+        }
         
         switch host {
         case "browse":
@@ -97,7 +113,7 @@ struct ContentView: View {
             .tag(Tab.video)
             
             
-            MapView()
+            mapFactory()
                 .tabItem {
                     Image(systemName: "map")
                     Text("Locations")
@@ -128,6 +144,7 @@ struct ContentView: View {
     
     let animalRepository = AnimalRepositoryPreview()
     let videoRepository = VideoRepositoryPreview()
+    let mapRepository = MapRepositoryPreview()
     
     return ContentView {
         BrowseView(animalRepository: animalRepository)
@@ -137,6 +154,8 @@ struct ContentView: View {
         VideoListView(videoRepository: videoRepository)
     } videoPlayerFactory: { id in
         VideoPlayerView(videoRepository: videoRepository, videoId: id)
+    } mapFactory: {
+        MapView(mapRepository: mapRepository)
     }
     .preferredColorScheme(.dark)
 }

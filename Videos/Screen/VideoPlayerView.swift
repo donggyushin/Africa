@@ -27,7 +27,7 @@ public struct VideoPlayerView: View {
                     url: url
                 )
             )
-            .overlay(alignment: .topLeading) {
+            .overlay(alignment: .topTrailing) {
                 Image("logo", bundle: .init(identifier: "com.donggyu.Videos"))
                     .resizable()
                     .scaledToFit()

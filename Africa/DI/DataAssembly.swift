@@ -18,5 +18,9 @@ struct DataAssembly: Assembly {
         container.register(VideoRepository.self) { _ in
             return VideoRepositoryData()
         }
+        
+        container.register(MapRepository.self) { _ in
+            return MapRepositoryData()
+        }
     }
 }
