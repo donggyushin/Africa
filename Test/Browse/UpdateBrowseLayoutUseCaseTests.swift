@@ -22,17 +22,17 @@ final class UpdateBrowseLayoutUseCaseTests: XCTestCase {
 
     func test_tap_list_when_list() throws {
         
-        var layout = BrowseLayoutDomain(right: .oneColumn)
+        var layout = BrowseLayoutDomain()
         layout.selected = .list
         
         let result = useCase?.invoke(layout: layout, tap: .list)
-        var expect = layout
+        let expect = layout
         
         XCTAssertEqual(result, expect)
     }
     
     func test_tap_list_when_column() throws {
-        var layout = BrowseLayoutDomain(right: .oneColumn)
+        var layout = BrowseLayoutDomain()
         layout.selected = .oneColumn
         
         let result = useCase?.invoke(layout: layout, tap: .list)
@@ -43,7 +43,7 @@ final class UpdateBrowseLayoutUseCaseTests: XCTestCase {
     }
     
     func test_tap_column_when_list() throws {
-        var layout = BrowseLayoutDomain(right: .oneColumn)
+        var layout = BrowseLayoutDomain()
         layout.selected = .list
         
         let result = useCase?.invoke(layout: layout, tap: .oneColumn)
@@ -54,13 +54,26 @@ final class UpdateBrowseLayoutUseCaseTests: XCTestCase {
     }
     
     func test_tap_column_when_column() throws {
-        var layout = BrowseLayoutDomain(right: .oneColumn)
+        var layout = BrowseLayoutDomain()
         layout.selected = .oneColumn
         
         let result = useCase?.invoke(layout: layout, tap: .oneColumn)
         var expect = layout
         expect.selected = .twoColumn
         expect.right = .twoColumn
+        
+        XCTAssertEqual(result, expect)
+    }
+    
+    func test_tap_column_when_two_column() {
+        var layout = BrowseLayoutDomain()
+        layout.right = .twoColumn
+        layout.selected = .twoColumn
+        
+        let result = useCase?.invoke(layout: layout, tap: .twoColumn)
+        var expect = layout
+        expect.selected = .oneColumn
+        expect.right = .oneColumn
         
         XCTAssertEqual(result, expect)
     }

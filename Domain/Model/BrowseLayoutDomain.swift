@@ -10,9 +10,9 @@ public struct BrowseLayoutDomain: Equatable {
     public var right: BrowseLayoutTypeDomain
     public var selected: BrowseLayoutTypeDomain
     
-    public init(right: BrowseLayoutTypeDomain) {
+    public init() {
         self.left = .list
-        self.right = right
+        self.right = .oneColumn
         self.selected = .list
     }
     
