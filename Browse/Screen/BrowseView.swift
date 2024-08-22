@@ -38,8 +38,11 @@ public struct BrowseView: View {
 }
 
 #Preview {
-    return BrowseView(
-        animalRepository: AnimalRepositoryPreview()
-    )
+    
+    return NavigationStack {
+        BrowseView(
+            animalRepository: AnimalRepositoryPreview()
+        )
+    }
     .preferredColorScheme(.dark)
 }
