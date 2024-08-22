@@ -21,13 +21,5 @@ struct VideoVideos: Identifiable {
         name = domain.name
         headline = domain.headline
     }
-    
-    var domain: VideoDomain {
-        .init(
-            id: id,
-            name: name,
-            headline: headline
-        )
-    }
 }
 

@@ -11,6 +11,8 @@
 		7021705C2C77201500FFA59D /* AnimalAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021705B2C77201500FFA59D /* AnimalAnnotation.swift */; };
 		7021705E2C77236900FFA59D /* GalleryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021705D2C77236900FFA59D /* GalleryAssembly.swift */; };
 		702170602C7723F800FFA59D /* GalleryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021705F2C7723F800FFA59D /* GalleryCoordinator.swift */; };
+		702170622C77246D00FFA59D /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702170612C77246D00FFA59D /* GalleryViewModel.swift */; };
+		702170652C77249100FFA59D /* AnimalGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702170642C77249100FFA59D /* AnimalGallery.swift */; };
 		702E60182C74C10A009D5F90 /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E60172C74C10A009D5F90 /* AfricaApp.swift */; };
 		702E601A2C74C10A009D5F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E60192C74C10A009D5F90 /* ContentView.swift */; };
 		702E601C2C74C10B009D5F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702E601B2C74C10B009D5F90 /* Assets.xcassets */; };
@@ -458,6 +460,8 @@
 		7021705B2C77201500FFA59D /* AnimalAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAnnotation.swift; sourceTree = "<group>"; };
 		7021705D2C77236900FFA59D /* GalleryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAssembly.swift; sourceTree = "<group>"; };
 		7021705F2C7723F800FFA59D /* GalleryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCoordinator.swift; sourceTree = "<group>"; };
+		702170612C77246D00FFA59D /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		702170642C77249100FFA59D /* AnimalGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGallery.swift; sourceTree = "<group>"; };
 		702E60142C74C10A009D5F90 /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		702E60172C74C10A009D5F90 /* AfricaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaApp.swift; sourceTree = "<group>"; };
 		702E60192C74C10A009D5F90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -679,6 +683,14 @@
 				702170582C771FF200FFA59D /* Thumbnail.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		702170632C77248500FFA59D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				702170642C77249100FFA59D /* AnimalGallery.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		702E600B2C74C10A009D5F90 = {
@@ -1119,6 +1131,7 @@
 			isa = PBXGroup;
 			children = (
 				70EA8E7A2C74C67300558B75 /* Gallery.h */,
+				702170632C77248500FFA59D /* Model */,
 				70EA8E832C74C67800558B75 /* Screen */,
 			);
 			path = Gallery;
@@ -1128,6 +1141,7 @@
 			isa = PBXGroup;
 			children = (
 				70EA8E842C74C68100558B75 /* GalleryView.swift */,
+				702170612C77246D00FFA59D /* GalleryViewModel.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -1775,6 +1789,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				70EA8E852C74C68100558B75 /* GalleryView.swift in Sources */,
+				702170652C77249100FFA59D /* AnimalGallery.swift in Sources */,
+				702170622C77246D00FFA59D /* GalleryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

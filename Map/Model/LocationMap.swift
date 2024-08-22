@@ -30,15 +30,5 @@ struct LocationMap: Identifiable {
         latitude = domain.latitude
         longitude = domain.longitude
     }
-    
-    var domain: LocationDomain {
-        .init(
-            id: id,
-            name: name,
-            image: image,
-            latitude: latitude,
-            longitude: longitude
-        )
-    }
 }
 

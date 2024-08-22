@@ -11,8 +11,9 @@ import Gallery
 
 struct GalleryAssembly: Assembly {
     func assemble(container: Swinject.Container) {
-        container.register(GalleryView.self) { _ in
-            return GalleryView()
+        container.register(GalleryView.self) { resolver in
+            let animalRepository = resolver.resolve(AnimalRepository.self)!
+            return GalleryView(animalRepository: animalRepository)
         }
     }
 }

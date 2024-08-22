@@ -159,7 +159,7 @@ struct ContentView: View {
     } mapFactory: {
         MapView(mapRepository: mapRepository)
     } galleryFactory: {
-        GalleryView()
+        GalleryView(animalRepository: animalRepository)
     }
     .preferredColorScheme(.dark)
 }

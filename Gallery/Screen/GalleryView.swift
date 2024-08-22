@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Domain
+import PreviewData
 
 public struct GalleryView: View {
     
-    public init() { 
-        
+    @StateObject var viewModel: GalleryViewModel
+    
+    public init(animalRepository: AnimalRepository) {
+        _viewModel = .init(wrappedValue: .init(animalRepository: animalRepository))
     }
     
     public var body: some View {
@@ -19,5 +23,6 @@ public struct GalleryView: View {
 }
 
 #Preview {
-    GalleryView()
+    GalleryView(animalRepository: AnimalRepositoryPreview())
+        .preferredColorScheme(.dark)
 }

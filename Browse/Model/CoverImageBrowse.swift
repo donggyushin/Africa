@@ -15,8 +15,4 @@ struct CoverImageBrowse: Identifiable {
         id = domain.id
         name = domain.name
     }
-    
-    var domain: CoverImageDomain {
-        .init(id: id, name: name)
-    }
 }
