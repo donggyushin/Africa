@@ -730,18 +730,10 @@
 		709D8FA22C76345900CB5E90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				709D8FA32C76346200CB5E90 /* Tab */,
+				709D8FA42C76348E00CB5E90 /* Tab.swift */,
 				709D8F9F2C76331B00CB5E90 /* Navigation */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		709D8FA32C76346200CB5E90 /* Tab */ = {
-			isa = PBXGroup;
-			children = (
-				709D8FA42C76348E00CB5E90 /* Tab.swift */,
-			);
-			path = Tab;
 			sourceTree = "<group>";
 		};
 		709D8FA62C7635AD00CB5E90 /* Coordinator */ = {
