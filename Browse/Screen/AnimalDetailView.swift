@@ -54,6 +54,8 @@ public struct AnimalDetailView: View {
                     .fontWeight(.bold)
             }
             .padding(.vertical)
+            
+            Gallery(gallery: animal.gallery)
         }
         .scrollIndicators(.hidden)
         .navigationTitle("Learn about \(animal.name)")
