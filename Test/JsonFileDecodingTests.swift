@@ -21,4 +21,8 @@ final class JsonFileDecodingTests: XCTestCase {
     func testVideos() {
         XCTAssertNotEqual(VIDEOS.count, 0)
     }
+    
+    func testLocations() {
+        XCTAssertNotEqual(LOCATIONS.count, 0)
+    }
 }
