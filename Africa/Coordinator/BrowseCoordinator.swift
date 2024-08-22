@@ -24,6 +24,7 @@ final class BrowseCoordinator {
     }
     
     func navigateToDetail(animalId: String) {
+        select()
         browseNavigationPath.append(.detail(animalId))
     }
 }
