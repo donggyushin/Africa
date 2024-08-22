@@ -74,6 +74,7 @@
 		70817C182C74D42500C96032 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70817C172C74D42500C96032 /* MainAssembly.swift */; };
 		70817C1C2C74D53600C96032 /* CoverImageBrowse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70817C1B2C74D53600C96032 /* CoverImageBrowse.swift */; };
 		70817C1E2C74D58900C96032 /* Covers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70817C1D2C74D58900C96032 /* Covers.swift */; };
+		709AEE342C7716580060FE4C /* MapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE332C7716580060FE4C /* MapAssembly.swift */; };
 		709D8F7E2C74D6BF00CB5E90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; };
 		709D8F7F2C74D6BF00CB5E90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		709D8F832C74D6D500CB5E90 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; };
@@ -438,6 +439,7 @@
 		70817C172C74D42500C96032 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		70817C1B2C74D53600C96032 /* CoverImageBrowse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageBrowse.swift; sourceTree = "<group>"; };
 		70817C1D2C74D58900C96032 /* Covers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covers.swift; sourceTree = "<group>"; };
+		709AEE332C7716580060FE4C /* MapAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssembly.swift; sourceTree = "<group>"; };
 		709D8F8B2C74D7E200CB5E90 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		709D8F912C74D91E00CB5E90 /* BrowseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseAssembly.swift; sourceTree = "<group>"; };
 		709D8F932C76270C00CB5E90 /* AnimalDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDomain.swift; sourceTree = "<group>"; };
@@ -804,6 +806,7 @@
 				70817BF92C74D1DA00C96032 /* DataAssembly.swift */,
 				70817BF72C74D17600C96032 /* DependencyInjector.swift */,
 				70817C172C74D42500C96032 /* MainAssembly.swift */,
+				709AEE332C7716580060FE4C /* MapAssembly.swift */,
 				707BE8D92C76F60100D34D6E /* VideoAssembly.swift */,
 			);
 			path = DI;
@@ -1511,6 +1514,7 @@
 			files = (
 				709D8FA82C7635BD00CB5E90 /* BrowseCoordinator.swift in Sources */,
 				70817C182C74D42500C96032 /* MainAssembly.swift in Sources */,
+				709AEE342C7716580060FE4C /* MapAssembly.swift in Sources */,
 				7078CBCB2C770F98009B8B41 /* VideosCoordinator.swift in Sources */,
 				709D8FAA2C76366600CB5E90 /* Coordinator.swift in Sources */,
 				709D8FA12C76333400CB5E90 /* BrowseNavigation.swift in Sources */,

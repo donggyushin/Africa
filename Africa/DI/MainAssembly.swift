@@ -8,6 +8,7 @@
 import Swinject
 import Browse
 import Videos
+import Map
 
 struct MainAssembly: Assembly {
     func assemble(container: Swinject.Container) {
@@ -20,6 +21,8 @@ struct MainAssembly: Assembly {
                 resolver.resolve(VideoListView.self)!
             } videoPlayerFactory: { id in
                 resolver.resolve(VideoPlayerView?.self, argument: id)!
+            } mapFactory: {
+                resolver.resolve(MapView.self)!
             }
         }
     }

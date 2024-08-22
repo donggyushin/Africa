@@ -24,6 +24,8 @@ struct ContentView: View {
     let videoListFactory: () -> VideoListView
     let videoPlayerFactory: (String) -> VideoPlayerView?
     
+    let mapFactory: () -> MapView
+    
     private func handleURL(url: URL) {
         guard let host = url.host() else { return }
         
@@ -97,7 +99,7 @@ struct ContentView: View {
             .tag(Tab.video)
             
             
-            MapView()
+            mapFactory()
                 .tabItem {
                     Image(systemName: "map")
                     Text("Locations")
@@ -137,6 +139,8 @@ struct ContentView: View {
         VideoListView(videoRepository: videoRepository)
     } videoPlayerFactory: { id in
         VideoPlayerView(videoRepository: videoRepository, videoId: id)
+    } mapFactory: {
+        MapView()
     }
     .preferredColorScheme(.dark)
 }
