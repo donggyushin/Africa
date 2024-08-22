@@ -12,6 +12,10 @@ struct VideoVideos: Codable {
     let name: String
     let headline: String
     
+    var cover: String {
+        "video-\(id)"
+    }
+    
     init(domain: VideoDomain) {
         id = domain.id
         name = domain.name
