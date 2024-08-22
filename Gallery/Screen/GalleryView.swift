@@ -13,14 +13,24 @@ public struct GalleryView: View {
     
     @StateObject var viewModel: GalleryViewModel
     
-    @State private var gridLayout: [GridItem] = [
-        .init(.flexible()),
-        .init(.flexible()),
-        .init(.flexible())
-    ]
+    @State private var gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
     
     public init(animalRepository: AnimalRepository) {
         _viewModel = .init(wrappedValue: .init(animalRepository: animalRepository))
+    }
+    
+    func columnsButton(columns: Int) -> some View {
+        Button {
+            withAnimation {
+                gridLayout = Array(repeating: GridItem(.flexible()), count: columns)
+            }
+        } label: {
+            HStack {
+                Text("\(columns)")
+                Image(systemName: "list.bullet")
+            }
+        }
+        .frame(maxWidth: .infinity)
     }
     
     public var body: some View {
@@ -36,51 +46,9 @@ public struct GalleryView: View {
             
             GroupBox {
                 HStack {
-                    Button {
-                        withAnimation {
-                            gridLayout = [
-                                .init(.flexible()),
-                                .init(.flexible()),
-                            ]
-                        }
-                    } label: {
-                        HStack {
-                            Text("2")
-                            Image(systemName: "list.bullet")
-                        }
+                    ForEach(2..<5) { colum in
+                        columnsButton(columns: colum)
                     }
-                    .frame(maxWidth: .infinity)
-                    Button {
-                        withAnimation {
-                            gridLayout = [
-                                .init(.flexible()),
-                                .init(.flexible()),
-                                .init(.flexible()),
-                            ]
-                        }
-                    } label: {
-                        HStack {
-                            Text("3")
-                            Image(systemName: "list.bullet")
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
-                    Button {
-                        withAnimation {
-                            gridLayout = [
-                                .init(.flexible()),
-                                .init(.flexible()),
-                                .init(.flexible()),
-                                .init(.flexible()),
-                            ]
-                        }
-                    } label: {
-                        HStack {
-                            Text("4")
-                            Image(systemName: "list.bullet")
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
                 }
             }
             .padding()
