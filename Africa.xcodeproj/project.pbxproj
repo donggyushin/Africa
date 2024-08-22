@@ -80,6 +80,7 @@
 		709AEE3B2C77175A0060FE4C /* GetLocationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE3A2C77175A0060FE4C /* GetLocationsUseCase.swift */; };
 		709AEE3D2C77179E0060FE4C /* LocationFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE3C2C77179E0060FE4C /* LocationFile.swift */; };
 		709AEE3F2C7718110060FE4C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE3E2C7718110060FE4C /* LocationData.swift */; };
+		709AEE412C7718920060FE4C /* MapRepositoryPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE402C7718920060FE4C /* MapRepositoryPreview.swift */; };
 		709D8F7E2C74D6BF00CB5E90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; };
 		709D8F7F2C74D6BF00CB5E90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		709D8F832C74D6D500CB5E90 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; };
@@ -450,6 +451,7 @@
 		709AEE3A2C77175A0060FE4C /* GetLocationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsUseCase.swift; sourceTree = "<group>"; };
 		709AEE3C2C77179E0060FE4C /* LocationFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFile.swift; sourceTree = "<group>"; };
 		709AEE3E2C7718110060FE4C /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		709AEE402C7718920060FE4C /* MapRepositoryPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepositoryPreview.swift; sourceTree = "<group>"; };
 		709D8F8B2C74D7E200CB5E90 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		709D8F912C74D91E00CB5E90 /* BrowseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseAssembly.swift; sourceTree = "<group>"; };
 		709D8F932C76270C00CB5E90 /* AnimalDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDomain.swift; sourceTree = "<group>"; };
@@ -840,6 +842,7 @@
 			isa = PBXGroup;
 			children = (
 				70817C152C74D34000C96032 /* AnimalRepositoryPreview.swift */,
+				709AEE402C7718920060FE4C /* MapRepositoryPreview.swift */,
 				707BE8D52C76F57500D34D6E /* VideoRepositoryPreview.swift */,
 			);
 			path = Repository;
@@ -1596,6 +1599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				707BE8D62C76F57500D34D6E /* VideoRepositoryPreview.swift in Sources */,
+				709AEE412C7718920060FE4C /* MapRepositoryPreview.swift in Sources */,
 				70817C162C74D34000C96032 /* AnimalRepositoryPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
