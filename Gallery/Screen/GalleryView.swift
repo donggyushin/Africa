@@ -25,6 +25,15 @@ public struct GalleryView: View {
     
     public var body: some View {
         ScrollView {
+            
+            Image(viewModel.selectedAnimal.image, bundle: .init(identifier: "com.donggyu.Gallery"))
+                .resizable()
+                .scaledToFit()
+                .clipShape(Circle())
+                .background {
+                    Circle().stroke(.accent, lineWidth: 4)
+                }
+            
             GroupBox {
                 HStack {
                     Button {
@@ -85,6 +94,9 @@ public struct GalleryView: View {
                         .clipShape(Circle())
                         .background {
                             Circle().stroke(lineWidth: 2)
+                        }
+                        .onTapGesture {
+                            viewModel.set(animal: animal)
                         }
                 }
             }
