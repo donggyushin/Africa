@@ -44,15 +44,7 @@ public struct AnimalDetailView: View {
                 .foregroundStyle(.accent)
                 .padding(.horizontal)
             
-            HStack {
-                Image(systemName: "photo.on.rectangle.angled")
-                    .foregroundStyle(.accent)
-                    .imageScale(.large)
-                
-                Text("Wilderness in Pictures")
-                    .font(.title3)
-                    .fontWeight(.bold)
-            }
+            Heading(image: "photo.on.rectangle.angled", text:  "Wilderness in Pictures")
             .padding(.vertical)
             
             Gallery(gallery: animal.gallery)
