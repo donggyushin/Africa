@@ -1,5 +1,5 @@
 //
-//  Annotation.swift
+//  AnimalAnnotation.swift
 //  Map
 //
 //  Created by 신동규 on 8/22/24.
@@ -9,7 +9,7 @@ import SwiftUI
 import Domain
 import Files
 
-struct Annotation: View {
+struct AnimalAnnotation: View {
     
     let location: LocationMap
     @State private var animation: Double = 0
@@ -41,6 +41,6 @@ struct Annotation: View {
 }
 
 #Preview {
-    Annotation(location: .init(domain: LOCATIONS[0]))
+    AnimalAnnotation(location: .init(domain: LOCATIONS[0]))
         .preferredColorScheme(.dark)
 }

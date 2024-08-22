@@ -21,8 +21,9 @@ public struct MapView: View {
     public var body: some View {
         Map {
             ForEach(viewModel.locations) { location in
-                Marker(location.name, coordinate: location.coordinate)
-                    .tint(.accent)
+                Annotation(location.name, coordinate: location.coordinate) {
+                    AnimalAnnotation(location: location)
+                }
             }
         }
     }
