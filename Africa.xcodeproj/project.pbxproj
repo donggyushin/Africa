@@ -14,6 +14,7 @@
 		707BE8BF2C76E75E00D34D6E /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707BE8BE2C76E75E00D34D6E /* Gallery.swift */; };
 		707BE8C12C76E89C00D34D6E /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707BE8C02C76E89C00D34D6E /* Heading.swift */; };
 		707BE8C32C76E98E00D34D6E /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707BE8C22C76E98E00D34D6E /* Facts.swift */; };
+		707BE8C52C76ECEB00D34D6E /* AfricaMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707BE8C42C76ECEB00D34D6E /* AfricaMap.swift */; };
 		70817B962C74C9B700C96032 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 70817B952C74C9B700C96032 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70817B992C74C9B700C96032 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; };
 		70817B9A2C74C9B700C96032 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -330,6 +331,7 @@
 		707BE8BE2C76E75E00D34D6E /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		707BE8C02C76E89C00D34D6E /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
 		707BE8C22C76E98E00D34D6E /* Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
+		707BE8C42C76ECEB00D34D6E /* AfricaMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaMap.swift; sourceTree = "<group>"; };
 		70817B932C74C9B700C96032 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70817B952C74C9B700C96032 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		70817B9F2C74C9D500C96032 /* CoverImageDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageDomain.swift; sourceTree = "<group>"; };
@@ -698,11 +700,12 @@
 		70817C192C74D50300C96032 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				707BE8C42C76ECEB00D34D6E /* AfricaMap.swift */,
 				709D8F9B2C76294900CB5E90 /* AnimalListItem.swift */,
 				70817C1D2C74D58900C96032 /* Covers.swift */,
+				707BE8C22C76E98E00D34D6E /* Facts.swift */,
 				707BE8BE2C76E75E00D34D6E /* Gallery.swift */,
 				707BE8C02C76E89C00D34D6E /* Heading.swift */,
-				707BE8C22C76E98E00D34D6E /* Facts.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1451,6 +1454,7 @@
 				707BE8C32C76E98E00D34D6E /* Facts.swift in Sources */,
 				707BE8BF2C76E75E00D34D6E /* Gallery.swift in Sources */,
 				70EA8E4B2C74C58600558B75 /* BrowseView.swift in Sources */,
+				707BE8C52C76ECEB00D34D6E /* AfricaMap.swift in Sources */,
 				709D8FB22C7638AE00CB5E90 /* AnimalDetailView.swift in Sources */,
 				709D8F9E2C76295D00CB5E90 /* AnimalBrowse.swift in Sources */,
 				70817C1C2C74D53600C96032 /* CoverImageBrowse.swift in Sources */,

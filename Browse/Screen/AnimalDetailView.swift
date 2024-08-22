@@ -65,6 +65,7 @@ public struct AnimalDetailView: View {
             
             Group {
                 Heading(image: "map", text:  "National Park")
+                AfricaMap()
             }
             .padding()
             
