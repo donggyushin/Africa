@@ -17,4 +17,8 @@ final class VideoListViewModel: ObservableObject {
         getVideosUseCase = .init(videoRepository: videoRepository)
         videos = getVideosUseCase.invoke().map({ .init(domain: $0) })
     }
+    
+    func shuffle() {
+        videos.shuffle()
+    }
 }

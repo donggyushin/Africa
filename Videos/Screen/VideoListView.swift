@@ -32,6 +32,14 @@ public struct VideoListView: View {
         .scrollIndicators(.hidden)
         .navigationTitle("Videos")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            Button {
+                viewModel.shuffle()
+            } label: {
+                Image(systemName: "arrow.2.squarepath")
+            }
+            .foregroundStyle(.accent)
+        }
     }
 }
 
