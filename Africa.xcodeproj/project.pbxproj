@@ -81,6 +81,7 @@
 		709AEE3D2C77179E0060FE4C /* LocationFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE3C2C77179E0060FE4C /* LocationFile.swift */; };
 		709AEE3F2C7718110060FE4C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE3E2C7718110060FE4C /* LocationData.swift */; };
 		709AEE412C7718920060FE4C /* MapRepositoryPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE402C7718920060FE4C /* MapRepositoryPreview.swift */; };
+		709AEE432C7718CB0060FE4C /* MapRepositoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709AEE422C7718CB0060FE4C /* MapRepositoryData.swift */; };
 		709D8F7E2C74D6BF00CB5E90 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; };
 		709D8F7F2C74D6BF00CB5E90 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		709D8F832C74D6D500CB5E90 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; };
@@ -452,6 +453,7 @@
 		709AEE3C2C77179E0060FE4C /* LocationFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFile.swift; sourceTree = "<group>"; };
 		709AEE3E2C7718110060FE4C /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		709AEE402C7718920060FE4C /* MapRepositoryPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepositoryPreview.swift; sourceTree = "<group>"; };
+		709AEE422C7718CB0060FE4C /* MapRepositoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepositoryData.swift; sourceTree = "<group>"; };
 		709D8F8B2C74D7E200CB5E90 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		709D8F912C74D91E00CB5E90 /* BrowseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseAssembly.swift; sourceTree = "<group>"; };
 		709D8F932C76270C00CB5E90 /* AnimalDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDomain.swift; sourceTree = "<group>"; };
@@ -792,6 +794,7 @@
 			children = (
 				70817BE92C74D03C00C96032 /* AnimalRepositoryData.swift */,
 				707BE8D72C76F5A200D34D6E /* VideoRepositoryData.swift */,
+				709AEE422C7718CB0060FE4C /* MapRepositoryData.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1581,6 +1584,7 @@
 			files = (
 				70817BEA2C74D03C00C96032 /* AnimalRepositoryData.swift in Sources */,
 				707BE8D82C76F5A200D34D6E /* VideoRepositoryData.swift in Sources */,
+				709AEE432C7718CB0060FE4C /* MapRepositoryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
