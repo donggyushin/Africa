@@ -101,13 +101,14 @@ struct ContentView: View {
 #Preview {
     
     let animalRepository = AnimalRepositoryPreview()
+    let videoRepository = VideoRepositoryPreview()
     
     return ContentView {
         BrowseView(animalRepository: animalRepository)
     } animalDetailFactory: { id in
         AnimalDetailView(animalId: id, animalRepository: animalRepository)
     } videoListFactory: {
-        VideoListView()
+        VideoListView(videoRepository: videoRepository)
     }
     .preferredColorScheme(.dark)
 }

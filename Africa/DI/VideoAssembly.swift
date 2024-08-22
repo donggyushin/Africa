@@ -11,8 +11,9 @@ import Videos
 
 struct VideoAssembly: Assembly {
     func assemble(container: Swinject.Container) {
-        container.register(VideoListView.self) { _ in
-            return VideoListView()
+        container.register(VideoListView.self) { resolver in
+            let videoRepository: VideoRepository = resolver.resolve(VideoRepository.self)!
+            return VideoListView(videoRepository: videoRepository)
         }
     }
 }

@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Domain
+import PreviewData
 
 public struct VideoListView: View {
     
-    public init() {
-        
+    @StateObject var viewModel: VideoListViewModel
+    
+    public init(videoRepository: VideoRepository) {
+        _viewModel = .init(wrappedValue: .init(videoRepository: videoRepository))
     }
     
     public var body: some View {
@@ -19,5 +23,6 @@ public struct VideoListView: View {
 }
 
 #Preview {
-    VideoListView()
+    return VideoListView(videoRepository: VideoRepositoryPreview())
+        .preferredColorScheme(.dark)
 }

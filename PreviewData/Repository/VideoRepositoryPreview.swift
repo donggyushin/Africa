@@ -10,4 +10,6 @@ import Files
 
 public final class VideoRepositoryPreview: VideoRepository {
     public var videos: [Domain.VideoDomain] { VIDEOS }
+    
+    public init() { }
 }
