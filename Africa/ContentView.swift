@@ -130,6 +130,7 @@ struct ContentView: View {
     
     let animalRepository = AnimalRepositoryPreview()
     let videoRepository = VideoRepositoryPreview()
+    let mapRepository = MapRepositoryPreview()
     
     return ContentView {
         BrowseView(animalRepository: animalRepository)
@@ -140,7 +141,7 @@ struct ContentView: View {
     } videoPlayerFactory: { id in
         VideoPlayerView(videoRepository: videoRepository, videoId: id)
     } mapFactory: {
-        MapView()
+        MapView(mapRepository: mapRepository)
     }
     .preferredColorScheme(.dark)
 }

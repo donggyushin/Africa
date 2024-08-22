@@ -11,8 +11,9 @@ import Swinject
 
 struct MapAssembly: Assembly {
     func assemble(container: Swinject.Container) {
-        container.register(MapView.self) { _ in
-            return MapView()
+        container.register(MapView.self) { resolver in
+            let mapRepository = resolver.resolve(MapRepository.self)!
+            return MapView(mapRepository: mapRepository)
         }
     }
 }

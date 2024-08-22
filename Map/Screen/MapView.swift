@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Domain
+import PreviewData
 
 public struct MapView: View {
     
-    public init() {
-        
+    @StateObject var viewModel: MapViewModel
+    
+    public init(mapRepository: MapRepository) {
+        _viewModel = .init(wrappedValue: .init(mapRepository: mapRepository))
     }
     
     public var body: some View {
@@ -19,5 +23,6 @@ public struct MapView: View {
 }
 
 #Preview {
-    MapView()
+    MapView(mapRepository: MapRepositoryPreview())
+        .preferredColorScheme(.dark)
 }
