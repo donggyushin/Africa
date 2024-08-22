@@ -20,6 +20,7 @@ struct AfricaApp: App {
             BrowseAssembly(),
             VideoAssembly(),
             MapAssembly(),
+            GalleryAssembly(),
             MainAssembly()
         ])
     }
