@@ -13,6 +13,14 @@
 		702170602C7723F800FFA59D /* GalleryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021705F2C7723F800FFA59D /* GalleryCoordinator.swift */; };
 		702170622C77246D00FFA59D /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702170612C77246D00FFA59D /* GalleryViewModel.swift */; };
 		702170652C77249100FFA59D /* AnimalGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702170642C77249100FFA59D /* AnimalGallery.swift */; };
+		702170662C7727B700FFA59D /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; };
+		702170672C7727B700FFA59D /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70817B932C74C9B700C96032 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7021706B2C7727CC00FFA59D /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709D8FB82C763BD900CB5E90 /* Common.framework */; };
+		7021706C2C7727CC00FFA59D /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 709D8FB82C763BD900CB5E90 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7021706F2C7727CF00FFA59D /* PreviewData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70817C002C74D31E00C96032 /* PreviewData.framework */; };
+		702170702C7727CF00FFA59D /* PreviewData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70817C002C74D31E00C96032 /* PreviewData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		702170732C7727D600FFA59D /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; };
+		702170742C7727D600FFA59D /* Files.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70EA8E0E2C74C2D700558B75 /* Files.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		702E60182C74C10A009D5F90 /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E60172C74C10A009D5F90 /* AfricaApp.swift */; };
 		702E601A2C74C10A009D5F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702E60192C74C10A009D5F90 /* ContentView.swift */; };
 		702E601C2C74C10B009D5F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702E601B2C74C10B009D5F90 /* Assets.xcassets */; };
@@ -165,6 +173,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		702170682C7727B700FFA59D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E600C2C74C10A009D5F90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70817B922C74C9B700C96032;
+			remoteInfo = Domain;
+		};
+		7021706D2C7727CC00FFA59D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E600C2C74C10A009D5F90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 709D8FB72C763BD900CB5E90;
+			remoteInfo = Common;
+		};
+		702170712C7727CF00FFA59D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E600C2C74C10A009D5F90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70817BFF2C74D31E00C96032;
+			remoteInfo = PreviewData;
+		};
+		702170752C7727D600FFA59D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702E600C2C74C10A009D5F90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70EA8E0D2C74C2D700558B75;
+			remoteInfo = Files;
+		};
 		707BE8E22C7701EE00D34D6E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 702E600C2C74C10A009D5F90 /* Project object */;
@@ -357,6 +393,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7021706A2C7727B700FFA59D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				702170672C7727B700FFA59D /* Domain.framework in Embed Frameworks */,
+				702170702C7727CF00FFA59D /* PreviewData.framework in Embed Frameworks */,
+				702170742C7727D600FFA59D /* Files.framework in Embed Frameworks */,
+				7021706C2C7727CC00FFA59D /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		707BE8E42C7701EE00D34D6E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -671,6 +721,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702170662C7727B700FFA59D /* Domain.framework in Frameworks */,
+				7021706F2C7727CF00FFA59D /* PreviewData.framework in Frameworks */,
+				702170732C7727D600FFA59D /* Files.framework in Frameworks */,
+				7021706B2C7727CC00FFA59D /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1447,10 +1501,15 @@
 				70EA8E742C74C67300558B75 /* Sources */,
 				70EA8E752C74C67300558B75 /* Frameworks */,
 				70EA8E762C74C67300558B75 /* Resources */,
+				7021706A2C7727B700FFA59D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				702170692C7727B700FFA59D /* PBXTargetDependency */,
+				7021706E2C7727CC00FFA59D /* PBXTargetDependency */,
+				702170722C7727CF00FFA59D /* PBXTargetDependency */,
+				702170762C7727D600FFA59D /* PBXTargetDependency */,
 			);
 			name = Gallery;
 			productName = Gallery;
@@ -1797,6 +1856,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		702170692C7727B700FFA59D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70817B922C74C9B700C96032 /* Domain */;
+			targetProxy = 702170682C7727B700FFA59D /* PBXContainerItemProxy */;
+		};
+		7021706E2C7727CC00FFA59D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 709D8FB72C763BD900CB5E90 /* Common */;
+			targetProxy = 7021706D2C7727CC00FFA59D /* PBXContainerItemProxy */;
+		};
+		702170722C7727CF00FFA59D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70817BFF2C74D31E00C96032 /* PreviewData */;
+			targetProxy = 702170712C7727CF00FFA59D /* PBXContainerItemProxy */;
+		};
+		702170762C7727D600FFA59D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70EA8E0D2C74C2D700558B75 /* Files */;
+			targetProxy = 702170752C7727D600FFA59D /* PBXContainerItemProxy */;
+		};
 		707BE8E32C7701EE00D34D6E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 70817B922C74C9B700C96032 /* Domain */;
