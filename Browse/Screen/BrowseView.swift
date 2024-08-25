@@ -71,6 +71,7 @@ public struct BrowseView: View {
                 }
             }
         }
+        .navigationTitle("Africa")
         
     }
 }
