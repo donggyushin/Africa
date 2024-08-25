@@ -38,18 +38,16 @@ enum BrowseLayoutTypeBrowse {
     case twoColumn
     case threeColumn
     
-    init(domain: BrowseLayoutTypeDomain) {
-        switch domain {
+    var systemImageName: String {
+        switch self {
         case .list:
-            self = .list
+            "list.dash"
         case .oneColumn:
-            self = .oneColumn
+            "rectangle.grid.1x2"
         case .twoColumn:
-            self = .twoColumn
+            "rectangle.grid.2x2"
         case .threeColumn:
-            self = .threeColumn
-        @unknown default:
-            fatalError()
+            "rectangle.grid.3x2"
         }
     }
     
@@ -63,6 +61,21 @@ enum BrowseLayoutTypeBrowse {
             return .twoColumn
         case .threeColumn:
             return .threeColumn
+        }
+    }
+    
+    init(domain: BrowseLayoutTypeDomain) {
+        switch domain {
+        case .list:
+            self = .list
+        case .oneColumn:
+            self = .oneColumn
+        case .twoColumn:
+            self = .twoColumn
+        case .threeColumn:
+            self = .threeColumn
+        @unknown default:
+            fatalError()
         }
     }
 }

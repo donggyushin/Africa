@@ -33,46 +33,15 @@ public struct BrowseView: View {
             }
         }
         .toolbar {
-            Button {
+            LayoutToolbarItem(layout: viewModel.layout.left, selected: viewModel.layout.selected) {
                 viewModel.tapLayoutList()
-            } label: {
-                Image(systemName: "list.dash")
-                    .foregroundStyle(viewModel.layout.selected == .list ? .accent : Color(uiColor: .label))
             }
             
-            switch viewModel.layout.right {
-            case .list:
-                Button {
-                    viewModel.tapGridList()
-                } label: {
-                    Image(systemName: "rectangle.grid.1x2")
-                        .foregroundStyle(viewModel.layout.selected == .list ? .accent : Color(uiColor: .label))
-                }
-            case .oneColumn:
-                Button {
-                    viewModel.tapGridList()
-                } label: {
-                    Image(systemName: "rectangle.grid.1x2")
-                        .foregroundStyle(viewModel.layout.selected == .oneColumn ? .accent : Color(uiColor: .label))
-                }
-            case .twoColumn:
-                Button {
-                    viewModel.tapGridList()
-                } label: {
-                    Image(systemName: "rectangle.grid.2x2")
-                        .foregroundStyle(viewModel.layout.selected == .twoColumn ? .accent : Color(uiColor: .label))
-                }
-            case .threeColumn:
-                Button {
-                    viewModel.tapGridList()
-                } label: {
-                    Image(systemName: "rectangle.grid.3x2")
-                        .foregroundStyle(viewModel.layout.selected == .threeColumn ? .accent : Color(uiColor: .label))
-                }
+            LayoutToolbarItem(layout: viewModel.layout.right, selected: viewModel.layout.selected) {
+                viewModel.tapGridList()
             }
         }
         .navigationTitle("Africa")
-        
     }
 }
 
