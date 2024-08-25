@@ -72,6 +72,19 @@ final class UpdateBrowseLayoutUseCaseTests: XCTestCase {
         
         let result = useCase?.invoke(layout: layout, tap: .twoColumn)
         var expect = layout
+        expect.selected = .threeColumn
+        expect.right = .threeColumn
+        
+        XCTAssertEqual(result, expect)
+    }
+    
+    func test_tap_column_when_three_column() {
+        var layout = BrowseLayoutDomain()
+        layout.right = .threeColumn
+        layout.selected = .threeColumn
+        
+        let result = useCase?.invoke(layout: layout, tap: .threeColumn)
+        var expect = layout
         expect.selected = .oneColumn
         expect.right = .oneColumn
         

@@ -22,4 +22,5 @@ public enum BrowseLayoutTypeDomain {
     case list
     case oneColumn
     case twoColumn
+    case threeColumn
 }

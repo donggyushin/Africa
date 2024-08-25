@@ -27,6 +27,14 @@ public final class UpdateBrowseLayoutUseCase {
                 result.right = .twoColumn
                 result.selected = .twoColumn
             } else {
+                result.right = .threeColumn
+                result.selected = .threeColumn
+            }
+        case .threeColumn:
+            if result.selected == .list {
+                result.right = .threeColumn
+                result.selected = .threeColumn
+            } else {
                 result.right = .oneColumn
                 result.selected = .oneColumn
             }
