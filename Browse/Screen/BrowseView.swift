@@ -19,21 +19,29 @@ public struct BrowseView: View {
     }
     
     public var body: some View {
-        ScrollView {
-            Covers(images: viewModel.covers)
-                .frame(height: 300)
-            
-            
-            ForEach(viewModel.animals) { data in
-                Button {
-                    Common.openURL(url: "dgafrica://browse?screen=detail&id=\(data.id)")
-                } label: {
-                    AnimalListItem(data: data)
-                        .foregroundStyle(Color(uiColor: .label))
-                }
+        ZStack {
+            if viewModel.layout.selected == .list {
+                AnimalList(
+                    covers: viewModel.covers,
+                    animals: viewModel.animals
+                )
+            } else {
+                AnimalGrid(
+                    layout: viewModel.layout.right,
+                    animals: viewModel.animals
+                )
             }
         }
-        .scrollIndicators(.hidden)
+        .toolbar {
+            LayoutToolbarItem(layout: viewModel.layout.left, selected: viewModel.layout.selected) {
+                viewModel.tapLayoutList()
+            }
+            
+            LayoutToolbarItem(layout: viewModel.layout.right, selected: viewModel.layout.selected) {
+                viewModel.tapGridList()
+            }
+        }
+        .navigationTitle("Africa")
     }
 }
 
