@@ -17,6 +17,19 @@ struct BrowseLayoutBrowse: Equatable {
         right = .init(domain: domain.right)
         selected = .init(domain: domain.selected)
     }
+    
+    init() {
+        left = .list
+        right = .oneColumn
+        selected = .list
+    }
+    
+    var domain: BrowseLayoutDomain {
+        var domain = BrowseLayoutDomain()
+        domain.right = self.right.domain
+        domain.selected = self.selected.domain
+        return domain
+    }
 }
 
 enum BrowseLayoutTypeBrowse {
@@ -37,6 +50,19 @@ enum BrowseLayoutTypeBrowse {
             self = .threeColumn
         @unknown default:
             fatalError()
+        }
+    }
+    
+    var domain: BrowseLayoutTypeDomain {
+        switch self {
+        case .list:
+            return .list
+        case .oneColumn:
+            return .oneColumn
+        case .twoColumn:
+            return .twoColumn
+        case .threeColumn:
+            return .threeColumn
         }
     }
 }
